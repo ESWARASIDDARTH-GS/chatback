@@ -11,6 +11,8 @@ const io = new Server(server, {
   cors: {
     origin: "https://chat-bcak.herokuapp.com/",
     methods: ["GET", "POST"],
+    allowedHeaders: ["https://chat-bcak.herokuapp.com/"],
+    credentials: true
   },
 });
 
