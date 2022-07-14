@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-bcak.herokuapp.com/",
+    origin: "https://privacy-talk.netlify.app/",
     methods: ["GET", "POST"],
     allowedHeaders: ["https://chat-bcak.herokuapp.com/"],
     credentials: true
