@@ -31,9 +31,7 @@ io.on("connection", (socket) => {
   });
 });
 
-app.get('/', function(req, res) {
-  res.send("Server running")
-});
+
 
 server.listen(process.env.PORT || 5000, () => {
   console.log("SERVER RUNNING");
