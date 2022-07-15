@@ -4,8 +4,9 @@ const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 app.use(cors());
-
+app.options('*',cors())
 const server = http.createServer(app);
+
 
 const io = new Server(server, {
   cors: {
@@ -34,3 +35,12 @@ io.on("connection", (socket) => {
 server.listen(process.env.PORT || 5000, () => {
   console.log("SERVER RUNNING");
 });
+
+
+
+// const io= require("socket.io")(3000)
+
+// io.on("connection",socket=>{
+//   console.log(socket.id)
+ 
+// })
