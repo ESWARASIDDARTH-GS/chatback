@@ -8,12 +8,11 @@ app.options('*',cors())
 const server = http.createServer(app);
 
 
-const io = new Server(server, {
-  cors: {
-    origin: "https://chat-bcak.herokuapp.com/",
-    methods: ["GET", "POST"],
-  },
-});
+const io = new Server(server)
+  
+    
+
+
 
 io.on("connection", (socket) => {
   console.log(`User Connected: ${socket.id}`);
